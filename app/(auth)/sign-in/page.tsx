@@ -14,9 +14,9 @@ import {
   FieldGroup,
   FieldSet,
 } from "@/components/ui/field";
-// import { GithubSignInForm } from '@/features/auth/components/github-sign-in-form';
+import { GithubSignInForm } from '@/features/auth/components/github-sign-form';
 
-
+// for showing the sign-in page in the browser
 export const metadata: Metadata = {
   title: "Sign in",
   description: "Sign in to Chai AI Code Reviewer with your GitHub account.",
@@ -51,7 +51,7 @@ const SignInPage = async({searchParams}:SignInPageProps) => {
         <FieldSet>
           <FieldGroup>
             <Field>
-              {/* <GithubSignInForm callbackUrl={callbackUrl} /> */}
+              <GithubSignInForm callbackUrl={callbackUrl} />
               <FieldDescription className="text-center">
                 We only request the permissions needed to identify your
                 account. You can revoke access anytime from GitHub settings.
